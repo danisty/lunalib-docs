@@ -39,9 +39,9 @@ Example:
 
 .. code-block:: lua
 
-    local label = Container:AddLabel("Example")
+    local label = Category:AddLabel("Example")
 
-    
+
 Properties
 ----------
 Title ``string``
