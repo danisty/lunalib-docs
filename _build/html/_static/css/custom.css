@@ -1,0 +1,14 @@
+h2 {
+    background: linear-gradient(45deg, #1a1c1e, transparent);
+    margin-left: -50px;
+    padding-left: 50px;
+}
+h3 {
+    margin-bottom: 0;
+}
+p, .line {
+    margin-top: 0;
+    color: #848484;
+    margin-left: -50px;
+    padding-left: 50px;
+}
