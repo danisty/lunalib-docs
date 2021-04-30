@@ -2,10 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Selector" href="selector.html" /><link rel="prev" title="DropDown" href="dropdown.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Selector" href="selector.html" />
 
     <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
-        <title>Container - lunalib documentation</title>
+        <title>KeyBind - lunalib documentation</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -126,9 +126,9 @@
 <li class="toctree-l2"><a class="reference internal" href="slider.html">Slider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropdown.html">DropDown</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container.html">Container</a></li>
 <li class="toctree-l2"><a class="reference internal" href="selector.html">Selector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keybind.html">KeyBind</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">KeyBind</a></li>
 </ul>
 </li>
 </ul>
@@ -145,27 +145,17 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="container">
-<h1>Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h1>
-<p>Slaves friendly</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>AddContainer (<span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> title, <span class="p">&lt;</span><span class="nt">int</span><span class="p">&gt;</span> spacing)
+        <div class="section" id="keybind">
+<h1>KeyBind<a class="headerlink" href="#keybind" title="Permalink to this headline">¶</a></h1>
+<p>A key binding is an association between a physical key on a keyboard and a parameter. A parameter can have any number of key bindings associated with it, and a particular key binding can control any number of parameters. Key bindings detects individual keys being pressed.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>AddKeyBind (<span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> title, <span class="p">&lt;</span><span class="nt">Enum.KeyCode</span><span class="p">&gt;</span> key, <span class="p">&lt;</span><span class="nt">function</span><span class="p">&gt;</span> callback, <span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> uniqueId)
 </pre></div>
 </div>
 <div class="section" id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="toggle-nil">
-<h3>Toggle <code class="docutils literal notranslate"><span class="pre">nil</span></code><a class="headerlink" href="#toggle-nil" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span> Toggle (<span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;</span> state)
-</pre></div>
-</div>
-</div>
-<div class="section" id="add-control-control">
-<h3>Add&lt;Control&gt; <code class="docutils literal notranslate"><span class="pre">Control</span></code><a class="headerlink" href="#add-control-control" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">Control</span><span class="p">&gt;</span> Add<span class="p">&lt;</span><span class="nt">Control</span><span class="p">&gt;</span> (...)
-</pre></div>
-</div>
-<p>Example:</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">label</span> <span class="o">=</span> <span class="n">Container</span><span class="p">:</span><span class="n">AddLabel</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+<div class="section" id="setkey-nil">
+<h3>SetKey <code class="docutils literal notranslate"><span class="pre">nil</span></code><a class="headerlink" href="#setkey-nil" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>SetKey (<span class="p">&lt;</span><span class="nt">Enum.KeyCode</span><span class="p">&gt;</span> key)
 </pre></div>
 </div>
 </div>
@@ -174,17 +164,15 @@
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="title-string">
 <h3>Title <code class="docutils literal notranslate"><span class="pre">string</span></code><a class="headerlink" href="#title-string" title="Permalink to this headline">¶</a></h3>
-<div class="line-block">
-<div class="line">Title of the Container.</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">Container</span></code> by default.</div>
+<p>Title of the KeyBind.</p>
 </div>
+<div class="section" id="key-enum-keycode">
+<h3>Key <code class="docutils literal notranslate"><span class="pre">Enum.KeyCode</span></code><a class="headerlink" href="#key-enum-keycode" title="Permalink to this headline">¶</a></h3>
+<p>Key for the KeyBind.</p>
 </div>
-<div class="section" id="spacing-int">
-<h3>Spacing <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#spacing-int" title="Permalink to this headline">¶</a></h3>
-<div class="line-block">
-<div class="line">Left margin of the Container content.</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">2</span></code> by default.</div>
-</div>
+<div class="section" id="callback-function">
+<h3>Callback <code class="docutils literal notranslate"><span class="pre">function</span></code><a class="headerlink" href="#callback-function" title="Permalink to this headline">¶</a></h3>
+<p>Called on Key pressed.</p>
 </div>
 </div>
 </div>
@@ -193,23 +181,15 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="selector.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Selector</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="dropdown.html">
+          
+          <a class="prev-page" href="selector.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">DropDown</div>
+                <div class="title">Selector</div>
                 
               </div>
             </a>
@@ -223,7 +203,7 @@
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="../_sources/instances/container.rst.txt"
+            <a class="muted-link" href="../_sources/instances/keybind.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -243,15 +223,15 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Container</a><ul>
+<li><a class="reference internal" href="#">KeyBind</a><ul>
 <li><a class="reference internal" href="#methods">Methods</a><ul>
-<li><a class="reference internal" href="#toggle-nil">Toggle <code class="docutils literal notranslate"><span class="pre">nil</span></code></a></li>
-<li><a class="reference internal" href="#add-control-control">Add&lt;Control&gt; <code class="docutils literal notranslate"><span class="pre">Control</span></code></a></li>
+<li><a class="reference internal" href="#setkey-nil">SetKey <code class="docutils literal notranslate"><span class="pre">nil</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#properties">Properties</a><ul>
 <li><a class="reference internal" href="#title-string">Title <code class="docutils literal notranslate"><span class="pre">string</span></code></a></li>
-<li><a class="reference internal" href="#spacing-int">Spacing <code class="docutils literal notranslate"><span class="pre">int</span></code></a></li>
+<li><a class="reference internal" href="#key-enum-keycode">Key <code class="docutils literal notranslate"><span class="pre">Enum.KeyCode</span></code></a></li>
+<li><a class="reference internal" href="#callback-function">Callback <code class="docutils literal notranslate"><span class="pre">function</span></code></a></li>
 </ul>
 </li>
 </ul>

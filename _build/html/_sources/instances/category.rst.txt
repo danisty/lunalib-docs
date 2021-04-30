@@ -17,6 +17,7 @@ Controls
 - :ref:`DropDown`
 - :ref:`Container`
 - :ref:`Selector`
+- :ref:`KeyBind`
 
 
 Methods

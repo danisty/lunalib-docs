@@ -12,6 +12,14 @@ Instances
 
 Methods
 -------
+Toggle ``nil``
+**************
+.. code-block:: html
+
+    <void> Toggle ()
+
+Toggle library UI visibility.
+
 ShowNotification ``nil``
 ************************
 .. code-block:: html

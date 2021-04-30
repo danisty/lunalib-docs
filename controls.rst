@@ -12,3 +12,4 @@ Controls
    instances/dropdown
    instances/container
    instances/selector
+   instances/keybind
