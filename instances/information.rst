@@ -29,7 +29,7 @@ This function will be called to know which information to display. You should re
 
 BindToHeartbeat ``boolean``
 ***************************
-| This acts like a toggle. If ``true`` it will automatically update the information, else you'll have to manually do it will the ``Update`` method.
+| This property acts like a toggle. If set to ``true``, it will automatically update the information, else you'll have to manually do it with the ``Update`` method.
 | ``false`` by default.
 
 Visible ``boolean``
