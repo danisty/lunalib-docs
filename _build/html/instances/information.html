@@ -90,7 +90,7 @@
       <a href="../index.html"><div class="brand">lunalib  documentation</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -143,11 +143,53 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
         <div class="section" id="information">
 <h1>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h1>
+<p>It displays information on screen.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>AddInformation (<span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> name, <span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;</span> bindToHeartbeat, <span class="p">&lt;</span><span class="nt">function</span><span class="p">&gt;</span> infoRetriever)
+</pre></div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="update-nil">
+<h3>Update <code class="docutils literal notranslate"><span class="pre">nil</span></code><a class="headerlink" href="#update-nil" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Update ()
+</pre></div>
+</div>
+<p>Calls <code class="docutils literal notranslate"><span class="pre">infoRetriever</span></code> and updates the information on screen.</p>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="name-string">
+<h3>Name <code class="docutils literal notranslate"><span class="pre">string</span></code><a class="headerlink" href="#name-string" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Name which will be displayed on Settings.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Information</span></code> by default.</div>
+</div>
+</div>
+<div class="section" id="inforetriever-function">
+<h3>InfoRetriever <code class="docutils literal notranslate"><span class="pre">function</span></code><a class="headerlink" href="#inforetriever-function" title="Permalink to this headline">¶</a></h3>
+<p>This function will be called to know which information to display. You should return a table.</p>
+</div>
+<div class="section" id="bindtoheartbeat-boolean">
+<h3>BindToHeartbeat <code class="docutils literal notranslate"><span class="pre">boolean</span></code><a class="headerlink" href="#bindtoheartbeat-boolean" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This acts like a toggle. If <code class="docutils literal notranslate"><span class="pre">true</span></code> it will automatically update the information, else you’ll have to manually do it will the <code class="docutils literal notranslate"><span class="pre">Update</span></code> method.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">false</span></code> by default.</div>
+</div>
+</div>
+<div class="section" id="visible-boolean">
+<h3>Visible <code class="docutils literal notranslate"><span class="pre">boolean</span></code><a class="headerlink" href="#visible-boolean" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Determines the visibility of the Information on screen.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">true</span></code> by default.</div>
+</div>
+</div>
+</div>
 </div>
 
       </article>
@@ -192,8 +234,37 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Information</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#update-nil">Update <code class="docutils literal notranslate"><span class="pre">nil</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#properties">Properties</a><ul>
+<li><a class="reference internal" href="#name-string">Name <code class="docutils literal notranslate"><span class="pre">string</span></code></a></li>
+<li><a class="reference internal" href="#inforetriever-function">InfoRetriever <code class="docutils literal notranslate"><span class="pre">function</span></code></a></li>
+<li><a class="reference internal" href="#bindtoheartbeat-boolean">BindToHeartbeat <code class="docutils literal notranslate"><span class="pre">boolean</span></code></a></li>
+<li><a class="reference internal" href="#visible-boolean">Visible <code class="docutils literal notranslate"><span class="pre">boolean</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
