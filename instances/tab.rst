@@ -48,6 +48,7 @@ Icon ``int``
 Selected ``boolean``
 ********************
 | Whether the tab is selected or not.
+| This property is Read-Only.
 | ``false`` by default.
 
 Categories ``table``

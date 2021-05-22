@@ -114,6 +114,7 @@
 <li class="toctree-l3"><a class="reference internal" href="category.html">Category</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="information.html">Information</a></li>
 </ul>
 </li>
 </ul>
@@ -176,6 +177,13 @@
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span> Select (<span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> item, <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span> customError)
 </pre></div>
 </div>
+<p>If the item doesn’t exist, and <code class="docutils literal notranslate"><span class="pre">customError</span></code> is passed, it will show a notification instead of throwing an error. It follows the next structure</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Error Title"</span><span class="p">,</span>
+    <span class="n">message</span><span class="o">=</span><span class="s2">"Oh no, anyway"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="properties">
@@ -209,6 +217,7 @@
 <h3>LastSelection <code class="docutils literal notranslate"><span class="pre">string</span></code><a class="headerlink" href="#lastselection-string" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">Last selected item.</div>
+<div class="line">This property is Read-Only.</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">nil</span></code> by default.</div>
 </div>
 </div>

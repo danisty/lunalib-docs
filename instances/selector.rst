@@ -32,6 +32,15 @@ Select ``nil``
 
     <void> Select (<string> item, <table> customError)
 
+If the item doesn't exist, and ``customError`` is passed, it will show a notification instead of throwing an error. It follows the next structure
+
+.. code-block:: lua
+
+    {
+        title="Error Title",
+        message="Oh no, anyway"
+    }
+
 
 Properties
 ----------
@@ -56,6 +65,7 @@ Items ``table``
 LastSelection ``string``
 ************************
 | Last selected item.
+| This property is Read-Only.
 | ``nil`` by default.
 
 Callback ``function``

@@ -2,10 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Slider" href="slider.html" /><link rel="prev" title="CheckBox" href="checkbox.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Controls" href="../controls.html" /><link rel="prev" title="Category" href="category.html" />
 
     <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
-        <title>ColorPicker - lunalib documentation</title>
+        <title>Information - lunalib documentation</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -90,7 +90,7 @@
       <a href="../index.html"><div class="brand">lunalib  documentation</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -108,22 +108,22 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../library.html">Library</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../library.html">Library</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="tab.html">Tab</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="category.html">Category</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="information.html">Information</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Information</a></li>
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../controls.html">Controls</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../controls.html">Controls</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="label.html">Label</a></li>
 <li class="toctree-l2"><a class="reference internal" href="button.html">Button</a></li>
 <li class="toctree-l2"><a class="reference internal" href="checkbox.html">CheckBox</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">ColorPicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="colorpicker.html">ColorPicker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="slider.html">Slider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropdown.html">DropDown</a></li>
@@ -143,69 +143,34 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="colorpicker">
-<h1>ColorPicker<a class="headerlink" href="#colorpicker" title="Permalink to this headline">¶</a></h1>
-<p>色を選ぶ</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>AddColorPicker (<span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> title, <span class="p">&lt;</span><span class="nt">Color3</span><span class="p">&gt;</span> color, <span class="p">&lt;</span><span class="nt">function</span><span class="p">&gt;</span> callback, <span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span> uniqueId)
-</pre></div>
-</div>
-<div class="section" id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="setcolor">
-<h3>SetColor<a class="headerlink" href="#setcolor" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span> SetColor (<span class="p">&lt;</span><span class="nt">Color3</span><span class="p">&gt;</span> color)
-</pre></div>
-</div>
-</div>
-<div class="section" id="toggle">
-<h3>Toggle<a class="headerlink" href="#toggle" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span> Toggle (<span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;</span> state)
-</pre></div>
-</div>
-<p>Show/Hide picker.</p>
-</div>
-</div>
-<div class="section" id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="title-string">
-<h3>Title <code class="docutils literal notranslate"><span class="pre">string</span></code><a class="headerlink" href="#title-string" title="Permalink to this headline">¶</a></h3>
-<p>Title of the ColorPicker.</p>
-</div>
-<div class="section" id="color-color3">
-<h3>Color <code class="docutils literal notranslate"><span class="pre">Color3</span></code><a class="headerlink" href="#color-color3" title="Permalink to this headline">¶</a></h3>
-<p>Color picked.</p>
-</div>
-<div class="section" id="callback-function">
-<h3>Callback <code class="docutils literal notranslate"><span class="pre">function</span></code><a class="headerlink" href="#callback-function" title="Permalink to this headline">¶</a></h3>
-<p>Called on color changed.</p>
-</div>
-</div>
+        <div class="section" id="information">
+<h1>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h1>
 </div>
 
       </article>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="slider.html">
+          <a class="next-page" href="../controls.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Slider</div>
+                <div class="title">Controls</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="checkbox.html">
+          <a class="prev-page" href="category.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">CheckBox</div>
+                <div class="title">Category</div>
                 
               </div>
             </a>
@@ -219,7 +184,7 @@
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="../_sources/instances/colorpicker.rst.txt"
+            <a class="muted-link" href="../_sources/instances/information.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -227,37 +192,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">ColorPicker</a><ul>
-<li><a class="reference internal" href="#methods">Methods</a><ul>
-<li><a class="reference internal" href="#setcolor">SetColor</a></li>
-<li><a class="reference internal" href="#toggle">Toggle</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#properties">Properties</a><ul>
-<li><a class="reference internal" href="#title-string">Title <code class="docutils literal notranslate"><span class="pre">string</span></code></a></li>
-<li><a class="reference internal" href="#color-color3">Color <code class="docutils literal notranslate"><span class="pre">Color3</span></code></a></li>
-<li><a class="reference internal" href="#callback-function">Callback <code class="docutils literal notranslate"><span class="pre">function</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

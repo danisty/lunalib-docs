@@ -4,8 +4,9 @@ A key binding is an association between a physical key on a keyboard and a param
 
 .. code-block:: html
 
-    AddKeyBind (<string> title, <Enum.KeyCode> key, <function> callback, <string> uniqueId)
+    AddKeyBind (<string> title, <Enum.KeyCode> key, <function> pressCallback, <function> changeCallback, <string> uniqueId)
 
+``pressCallback`` will be called once you press the key, and ``changeCallback`` once you change it.
 
 Methods
 -------
